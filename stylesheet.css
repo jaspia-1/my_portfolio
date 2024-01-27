@@ -1,0 +1,569 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* z-index: 100; */
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    color: #ededed;
+    width: 100%;
+    margin-top: 0;
+    background-color: rgb(15, 23, 41);
+    /* line-height: inherit; */
+    font-family: 'poppins',sans-serif;
+}
+
+
+.right{
+    margin-left: 20px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 10x;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: -1;
+    background-color: rgb(15, 23, 41);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+
+}
+
+.home-content {
+    max-width: 600px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+
+.home-content h3 span {
+    color: #0ef;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    white-space: nowrap;
+    /* Add this property to prevent line breaks */
+    overflow: hidden;
+    /* Add this property to hide the overflowing content */
+    text-overflow: ellipsis;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    /* background: transparent; */
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+.home-first a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.home-first a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+/* ... Your previous CSS ... */
+
+/* ... Your previous CSS ... */
+
+.home .home-content a:hover,
+.home .home-content a:focus {
+    /* background: rgb(46, 48, 48); */
+    color: #081b29;
+}
+
+
+
+
+.home-sci img {
+    max-width: 300%;
+    height: auto;
+    margin-left: 100px;
+    margin-right: 10px;
+    margin-top: 35px;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards 2s;
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.5); /* Adjusted box-shadow */
+    text-align: left;
+    white-space: nowrap;
+    margin-top: 0; /* Adjusted margin-top */
+    box-sizing: border-box; /* Added box-sizing */
+}
+
+.home-first {
+    margin-top: 30px;
+    
+}
+
+
+/* ... Your previous CSS ... */
+
+.btn-box:hover {
+    background-color: #0ef !important;
+    color: #081b29 !important;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan !important;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.about-text{
+    width: 50%;
+    margin-left: 70px;
+    margin-top: 200px;
+    
+}
+.about-text h2{
+    font-size: 40px;
+    white-space: nowrap;
+    /* Add this property to prevent line breaks */
+    overflow: hidden;
+    /* Add this property to hide the overflowing content */
+    text-overflow: ellipsis;
+}
+
+.about-text h4{
+    font-size: 25px;
+    font-weight:600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.single{
+    text-align: center;
+}
+
+.overall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    width: 60%;
+   
+
+    
+}
+
+.overall h1{
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+
+.double{
+    margin-top: 150px;
+    display: flex;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    
+}
+.overall div:hover{
+    transform: translateY(-10px);
+}
+.skills{
+    display: block;
+    font-weight: bold;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 5.26rem; 
+  margin-bottom: 1.25rem; 
+  width: 50%;
+}
+.skills span{
+    color: #0ef;
+}
+.aboutme span{
+    color: #0ef;
+}
+.aboutme{
+    display: block;
+    font-weight: bold;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 25.25rem; /* You may adjust the value based on your design */
+  margin-bottom: 1.25rem; 
+  width: 50%;
+}
+
+.about{
+    display: flex;
+    margin-top:-20px;
+    
+}
+
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+   text-decoration-thickness:7px;
+   margin-bottom: 50px;
+   font-weight: 700;
+   margin-top: 160px;
+   font-size: 3.50rem;
+  
+}
+.heading1 span{
+    color: #0ef;
+}
+
+ 
+.card{
+    flex-shrink:0;
+     max-width:24rem;
+     width: 100%;
+     border-radius: var(--rounded-box,1rem);
+     display: flex;
+     flex-direction: column;
+     position: relative;
+}
+.firstimage{
+    width: 50%;
+
+}
+
+ 
+
+.slider{
+    /* text-align: center;
+    align-items: center;
+    justify-content: center; */
+    margin-left: 180px;
+    margin-bottom: 480px;
+    /* margin-top: 100px; */
+
+}
+
+.blog{
+    margin-top: 150px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 100px;
+    
+}
+
+
+
+/* div.slider{
+position: relative;
+} */
+.slideclass p{
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+}
+.container{
+    width: 1170px;
+    margin: 0;
+    margin: auto;
+}
+
+
+.containform{
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 300px;
+}
+.texta{
+    /* background-color: hsl(var(--b1)/var(--tw-bg-opacity)); */
+    border-radius: var(--rounded-btn, .5rem);
+    border-radius: var(--rounded-btn, 0.5rem);
+    border-width: 1px;
+    flex-shrink: 1;
+    border: 0;
+    font-size:16px;
+    line-height: 1;
+    min-height: 3rem;
+   padding-left: 20px;
+    transition-duration: 0.2s;
+    padding-top: 20px;
+    --tw-border-opacity: 1;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    resize: vertical;
+    /* color: inherit; */
+    font-family: inherit;
+   outline: none;
+    width: 50vh;
+    background: rgba(128, 128, 128, 0.114);
+  
+
+}
+
+.submit{
+    
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 600;
+    height: 3rem;
+    line-height: 1em;
+    min-height: 3rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+    padding: 15px;
+    text-align: center;
+    text-decoration-line: none;
+    text-transform: var(--btn-text-case, uppercase);
+    transition-duration: 0.2s;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+background: #ff5361;
+color: #f5f5f5;
+border: 0;
+outline: none;
+cursor: pointer;
+}
+
+.cardbody{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    padding: var(--padding-card, 2rem);
+    
+}
+
+.cardse{
+    max-width: 25rem; /* Set your desired max width here */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: #f0f4f8; /* Set your desired background color here */
+    /* Add other styles as needed */
+    height: 22rem;
+}
+
+.formdiv{
+    text-align: center;
+    
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+   margin-top: 30px;
+   /* gap: 20px; */
+   text-align: left;
+   margin-top: 30px;
+   margin-left: -300px;
+}
+.social a {
+    font-size: 28px;
+    margin: 0 10px; 
+    color: #edededbf;
+  }
+
+
+/* flex-direction: colcoumn; */
+.text{
+   padding: 20px;
+  /* background-color:  hsl(var(--b1)/var(--tw-bg-opacity)); */
+  background: rgba(128, 128, 128, 0.114);
+  --rounded-btn: 0.5rem;
+  border-top-left-radius: var(--rounded-btn);
+  border-top-right-radius: var(--rounded-btn);
+  border-bottom-right-radius: var(--rounded-btn);
+  border-width: 1px;
+  flex-shrink: 1;
+  font-size: 16px;
+  height: 3rem;
+  width: 50vh;
+  border: 0;
+outline: none;
+}
+.slider-items{
+    position: absolute;
+    opacity: 0;
+}
+
+.get{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.slider-items img{
+    width: 900px;
+    height: 400px;
+}
+
+.active{
+    position: absolute;
+    opacity: 1;
+}
+.containerform{
+    /* width: 100%;
+    height: 100vh;
+    background: #001660;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+   /* margin-top: 10000px!important; */
+   flex-direction: column;
+ margin-left: 2000px;   
+}
+    
